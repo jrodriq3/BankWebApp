@@ -1,0 +1,19 @@
+/* 
+    Created on : Aug 19, 2022, 9:30:40 AM
+    Author     : jasonwilsonrodriguez
+    Lab #2
+*/
+.actlookbody {
+    background-color: grey;
+}
+.body-container {
+    display: block;
+    text-align: center;
+   
+}
+.item {
+    padding: 10px;
+}
+.button-box button{
+    margin: 25px;
+}
