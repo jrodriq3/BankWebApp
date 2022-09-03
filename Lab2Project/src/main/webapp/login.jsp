@@ -81,10 +81,10 @@ Lab #2 - Extra Credit
             <div class="brand-logo"></div>
             <div class="brand-title">ChattBank</div>
             <div class="inputs">
-              <label>EMAIL</label>
-              <input type="email" placeholder="example@test.com" />
+              <label>Customer ID</label>
+              <input type="text" name="customerId" onblur="validateId()"/>
               <label>PASSWORD</label>
-              <input type="password" placeholder="Min 6 charaters long" />
+              <input type="password" id="password" name="password" onblur="validatePassword()" />
               <button type="submit">LOGIN</button>
             </div>
     </form>
