@@ -9,6 +9,12 @@ Lab #2 - Extra Credit
         <title>Login Page</title>
         <script type="text/javascript">
             var idDone = false;
+            var hasBeenWarned1;
+            var hasBeenWarned2;
+            var hasBeenWarned3;
+            var hasBeenWarned4;
+            
+            var hasBeenWarnedPass;
             function isADecimal(n) {
                 var result = (n - Math.floor(n)) !== 0; 
                 return result;
@@ -16,26 +22,43 @@ Lab #2 - Extra Credit
             function validateId() {
                 var a;
                 var b;
+                
                 a = document.dataForm.customerId.value;
                 b = document.dataForm.password.value;
-                if (a == "") {
+                if (hasBeenWarned1 != true) {
+                    if (a == "") {
                     alert("you must enter something in id field");
+                    hasBeenWarned1 = true;
                     return;
+                    }
                 }
-                if (isNaN(a)) {
+                if (hasBeenWarned2 != true) {
+                    if (isNaN(a)) {
                     alert("id must be a number in id field");
+                    hasBeenWarned2 = true;
                     return;
+                    }
                 }
-                if (a < 3000 || a > 3999) {
+                if (hasBeenWarned3 != true) {
+                    if (a < 3000 || a > 3999) {
                     alert("id must be between 2999 and 4000");
+                    hasBeenWarned3 = true;
                     return;
+                    }
                 }
-                if (isADecimal(a) == true) {
+                if (hasBeenWarned4 != true) {
+                    if (isADecimal(a) == true) {
                     alert("number cant be a decimal");
+                    hasBeenWarned4 = true;
                     return;
+                    }
                 }
+                
                 idDone = true;
-            }
+                hasBeenWarned = true;
+                }
+                
+            
             function validatePassword() {
                 if (idDone == false) {
                     return;
@@ -44,10 +67,14 @@ Lab #2 - Extra Credit
                 var b;
                 a = document.dataForm.customerId.value;
                 b = document.dataForm.password.value;
-                if (b == "") {
+                if (hasBeenWarnedPass != true) {
+                    if (b == "") {
                     alert("You must enter something in password field");
+                    hasBeenWarnedPass = true;
                     return;
+                    }
                 }
+                
             }
             function clearClicked() {
                 document.dataForm.customerId.value = "";

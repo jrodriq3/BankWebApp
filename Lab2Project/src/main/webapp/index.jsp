@@ -37,7 +37,6 @@ Lab #2
                     color: white;
                     ">ChattBank</div>
             </div>
-
             <div style="
                 display: flex;
                 min-height: 100vh;
